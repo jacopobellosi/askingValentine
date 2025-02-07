@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Proposal</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #ffe6f2;
+            color: #ff66b2;
+        }
+        button {
+            background-color: #ff66b2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: #ff3385;
+        }
+        .hidden {
+            display: none;
+        }
+        .celebrate {
+            color: #ff66b2;
+            font-size: 1.5em;
+        }
+        .sad {
+            color: #ff3385;
+            font-size: 1.5em;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (min-width: 600px) {
+            body {
+                padding: 50px;
+            }
+            button {
+                padding: 15px 30px;
+                font-size: 1.5em;
+                margin: 20px;
+            }
+            .celebrate, .sad {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my Valentine, Sabrina?</h1>
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+
+    <div id="celebrate" class="hidden">
+        <h2 class="celebrate">YEEEEEEEEEEEEEEEEEEEEE!!!!!!!!!!!!</h2>
+        <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Celebration">
+        <h2 class="celebrate">Però lo organizzi tu <333333</h2>
+    </div>
+    <div id="sad" class="hidden">
+        <h2 class="sad">KTV!</h2>
+        <img src="https://media.giphy.com/media/3o6Zt6ML6BklcajjsA/giphy.gif" alt="Sadness">
+    </div>
+
+    <script>
+        document.getElementById('yesButton').addEventListener('click', function() {
+            document.getElementById('celebrate').classList.remove('hidden');
+            document.getElementById('sad').classList.add('hidden');
+        });
+
+        document.getElementById('noButton').addEventListener('click', function() {
+            document.getElementById('sad').classList.remove('hidden');
+            document.getElementById('celebrate').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
